@@ -11,6 +11,10 @@ app.get("/", (req: Request, res: Response) => {
   );
 });
 
+app.get("/health", (req: Request, res: Response) => {
+  res.status(200).send(`Server ${serverNumber} is healthy`);
+});
+
 app.listen(PORT, () => {
   console.log(
     `Replied with Hello Message from server ${serverNumber}, PORT: ${PORT}`,
