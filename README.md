@@ -22,3 +22,6 @@ docker run -it -d -e SERVER_NUMBER=3 -p 3003:3003 backend-server
 # send requests to see traffic is being distributed
 curl --parallel --parallel-immediate --parallel-max 5 --config urls.txt
 ```
+
+> [!TIP]
+> Try stopping and restarting 1 or 2 docker containers while invoking curl to see how traffic is distributed
